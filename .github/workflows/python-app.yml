@@ -29,7 +29,7 @@ jobs:
         pip install -r requirements.txt
     - name: Instalar Banco
       run:
-        python manage.py makemigrations
+        python manage.py migrate
     - name: Test with Django
       run: |
         python manage.py test
