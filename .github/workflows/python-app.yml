@@ -30,7 +30,7 @@ jobs:
     - name: Instalar banco
       run: |
         python manage.py migrate
-        python manage.py makemigrations  
+         
     - name: Test with Django
       run: |
         python manage.py test
