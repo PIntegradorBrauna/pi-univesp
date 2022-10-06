@@ -27,10 +27,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Instalar banco
-      run: |
-        python manage.py migrate
-         
+    - name: Instalar Banco
+      run:
+        python manage.py makemigrations
     - name: Test with Django
       run: |
         python manage.py test
