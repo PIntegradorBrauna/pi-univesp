@@ -169,8 +169,6 @@ def alterar_livro(request):
 def seus_emprestimos(request):
     usuario = Usuario.objects.get(id = request.session['usuario'])
     emprestimos = Emprestimos.objects.filter(nome_emprestado = usuario)
-    
-
 
     return render(request, 'seus_emprestimos.html', {'usuario_logado': request.session['usuario'],
                                                     'emprestimos': emprestimos})
@@ -186,3 +184,15 @@ def processa_avaliacao(request):
     emprestimo.avaliacao = opcoes
     emprestimo.save()
     return redirect(f'/livro/ver_livro/{id_livro}')
+
+def dashboard(request):
+    usuario = Usuario.objects.get(id = request.session['usuario'])
+    id_livro = request.POST.get('id_livro')
+    data = Livros.objects.all()
+    context = {
+        'data': data,
+    }
+    
+    
+    return render(request, 'dashboard.html', {'usuario_logado': request.session['usuario'],
+                                                    'data': data})

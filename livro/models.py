@@ -43,7 +43,7 @@ class Emprestimos(models.Model):
     avaliacao = models.CharField(max_length=1, choices=choices, null=True, blank=True)
 
     def __str__(self) -> str:
-        return f"{self.nome_emprestado} | {self.livro}"
+        return f"{self.nome_emprestado} | {self.livro} ! {self.data_emprestimo}"
 
 
 
