@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='emprestimos',
             name='tempo_duracao',
-            field=models.TimeField(blank=True, null=True),
+            field=models.DateTimeField(blank=True, null=True),
         ),
     ]

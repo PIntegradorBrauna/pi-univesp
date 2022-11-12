@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
                 ('nome_emprestado', models.CharField(blank=True, max_length=30, null=True)),
                 ('data_emprestimo', models.DateTimeField(blank=True, null=True)),
                 ('data_devolucao', models.DateTimeField(blank=True, null=True)),
-                ('tempo_duracao', models.DateField(blank=True, null=True)),
+                ('tempo_duracao', models.DateTimeField(blank=True, null=True)),
                 ('livro', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='livro.livros')),
             ],
         ),

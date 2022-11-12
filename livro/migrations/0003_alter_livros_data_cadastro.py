@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='livros',
             name='data_cadastro',
-            field=models.DateField(auto_now=True),
+            field=models.DateTimeField(auto_now=True),
         ),
     ]

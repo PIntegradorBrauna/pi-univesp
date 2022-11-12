@@ -13,11 +13,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='emprestimos',
             name='data_devolucao',
-            field=models.DateField(blank=True, null=True),
+            field=models.DateTimeField(blank=True, null=True),
         ),
         migrations.AlterField(
             model_name='emprestimos',
             name='data_emprestimo',
-            field=models.DateField(blank=True, null=True),
+            field=models.DateTimeField(blank=True, null=True),
         ),
     ]

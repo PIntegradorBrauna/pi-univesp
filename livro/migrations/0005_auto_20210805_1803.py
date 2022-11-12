@@ -34,6 +34,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='livros',
             name='tempo_duracao',
-            field=models.DateField(blank=True, null=True),
+            field=models.DateTimeField(blank=True, null=True),
         ),
     ]

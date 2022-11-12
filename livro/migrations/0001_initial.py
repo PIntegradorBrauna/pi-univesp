@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
                 ('nome_emprestado', models.CharField(max_length=30)),
                 ('data_emprestimo', models.DateTimeField()),
                 ('data_devolucao', models.DateTimeField()),
-                ('tempo_duracao', models.DateField()),
+                ('tempo_duracao', models.DateTimeField()),
             ],
         ),
     ]
