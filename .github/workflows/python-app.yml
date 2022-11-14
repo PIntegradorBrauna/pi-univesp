@@ -35,7 +35,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1     
-    - run: npm ci
+     - name: npm install, build, and test
+    run: |
+      npm install
+      npm run build --if-present
+      npm run test --if-present
     - run: node client.js
 
       env:
