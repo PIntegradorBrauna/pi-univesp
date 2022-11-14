@@ -79,5 +79,4 @@ jobs:
         POSTGRES_HOST: localhost
         POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }} # obtém a porta publicada atribuída aleatoriamente
     
-      run: |
-          python manage.py test
+      
