@@ -36,9 +36,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1     
     - run: npm ci
-      working-directory: ./postgres
     - run: postgres client.js
-      working-directory: ./postgres
+
       env:
         # use postgres para o host aqui porque especificamos um contêiner para o trabalho.
         # Se estivéssemos executando o trabalho na VM, seria localhost
