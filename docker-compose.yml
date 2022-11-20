@@ -18,38 +18,18 @@ services:
     networks:
       - postgres
 
-  pgadmin:
-    container_name: docker_django_pgadmin_container
-    image: dpage/pgadmin4
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=pgadmin4@pgadmin.org
-      - PGADMIN_DEFAULT_PASSWORD=admin
-    volumes:
-      - pgadmin:/root/.pgadmin
-    ports:
-      - "5050:80"
-    networks:
-      - postgres
-    depends_on:
-      - db
-
-  web:
-    build: .
-    # command: python manage.py runserver 0.0.0.0:8000
-    entrypoint: ["./wait-for-postgres.sh"]
-    volumes:
-      - .:/code
-    ports:
-      - "8000:8000"
-    networks:
-      - postgres
-    depends_on:
-      - db
-
-networks:
-  postgres:
-    driver: bridge
-
-volumes:
-    postgres:
-    pgadmin:
+steps:
+- uses: actions/checkout@v2
+- name: Set up Python 3.10.7
+  uses: actions/setup-python@v2
+  with:
+    python-version: 3.10.7
+- name: Install dependencies
+  run: 
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+    pip install pytest-django
+-name: Run migrations
+ run: python manage.py migrate
+-name: Run tests
+ run: py.test 
