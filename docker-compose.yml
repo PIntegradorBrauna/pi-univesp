@@ -19,23 +19,37 @@ services:
       - postgres
 
   pgadmin:
-    container_name: pgadmin
+    container_name: docker_django_pgadmin_container
     image: dpage/pgadmin4
-    restart: unless-stopped
-    volumes:
-       - pgadmin:/var/lib/pgadmin
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com
-      PGADMIN_DEFAULT_PASSWORD: admin
-      PGADMIN_CONFIG_SERVER_MODE: 'False'
+      - PGADMIN_DEFAULT_EMAIL=pgadmin4@pgadmin.org
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    volumes:
+      - pgadmin:/root/.pgadmin
     ports:
-      - 5050:80
+      - "5050:80"
     networks:
       - postgres
+    depends_on:
+      - db
 
-volumes:
-  pgdata:  # mesmo nome do volume externo definido na linha 10
-  pgadmin:
+  web:
+    build: .
+    # command: python manage.py runserver 0.0.0.0:8000
+    entrypoint: ["./wait-for-postgres.sh"]
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    networks:
+      - postgres
+    depends_on:
+      - db
 
 networks:
   postgres:
+    driver: bridge
+
+volumes:
+    postgres:
+    pgadmin:
