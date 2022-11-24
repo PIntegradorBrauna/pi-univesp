@@ -1,0 +1,36 @@
+Script iniciado em 2022-11-24 11:03:06-03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="80" LINES="24"]
+]777;notify;Command completed;git push\]777;precmd\]0;kimel@fedora:~/Wil/pi-univesp\]7;file://fedora/home/kimel/Wil/pi-univesp\[?2004h[kimel@fedora pi-univesp]$ d[Kls
+[?2004l]777;preexec\–                        LICENSE            Pipfile.lock      [0m[01;34mtemplates[0m
+backup_requirements.txt  [01;34mlivro[0m              README.md         typescript
+[01;34mbiblioteca[0m               manage.py          requirements.txt  [01;34musuarios[0m
+db.sqlite3               package-lock.json  [01;32mscript.bat[0m        [01;34mvenv[0m
+docker-compose.yml       Pipfile            [01;34mstaticfiles[0m
+]777;notify;Command completed;ls\]777;precmd\]0;kimel@fedora:~/Wil/pi-univesp\]7;file://fedora/home/kimel/Wil/pi-univesp\[?2004h[kimel@fedora pi-univesp]$ source venv/bin/activate
+[?2004l]777;preexec\]777;notify;Command completed;source venv/bin/activate\]777;precmd\]0;kimel@fedora:~/Wil/pi-univesp\]7;file://fedora/home/kimel/Wil/pi-univesp\[?2004h(venv) [kimel@fedora pi-univesp]$ pip install -r reque[Kirements.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksource venv/bin/activatels[Kgit pushcommit -m "update requirements"add .[K[1Ppushcommit -m "update requirements"push[K
+[?2004l]777;preexec\Username for 'https://github.com': PIntegradorBrauna
+Password for 'https://PIntegradorBrauna@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/PIntegradorBrauna/pi-univesp.git/'
+]777;notify;Command completed;git push\]777;precmd\]0;kimel@fedora:~/Wil/pi-univesp\]7;file://fedora/home/kimel/Wil/pi-univesp\[?2004h(venv) [kimel@fedora pi-univesp]$ git pushsource venv/bin/activatels[Kgit push
+[?2004l]777;preexec\Username for 'https://github.com': PIntegradorBrauna
+Password for 'https://PIntegradorBrauna@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/PIntegradorBrauna/pi-univesp.git/'
+]777;notify;Command completed;git push\]777;precmd\]0;kimel@fedora:~/Wil/pi-univesp\]7;file://fedora/home/kimel/Wil/pi-univesp\[?2004h(venv) [kimel@fedora pi-univesp]$ git pushsource venv/bin/activate[16Pgit push
+[?2004l]777;preexec\Username for 'https://github.com': 2010920@aluno.univesp.br
+Password for 'https://2010920@aluno.univesp.br@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/PIntegradorBrauna/pi-univesp.git/'
+]777;notify;Command completed;git push\]777;precmd\]0;kimel@fedora:~/Wil/pi-univesp\]7;file://fedora/home/kimel/Wil/pi-univesp\[?2004h(venv) [kimel@fedora pi-univesp]$ git s[K[Kt[K status
+[?2004l]777;preexec\On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mtypescript[m
+
+nothing added to commit but untracked files present (use "git add
